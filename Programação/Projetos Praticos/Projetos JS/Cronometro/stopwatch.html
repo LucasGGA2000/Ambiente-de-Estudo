@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stopWatch</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Stopwatch</h1>
+        <h2>JavaScript Stopwatch</h2>
+        <p><span id="seconds">00</span>:<span id="tens">00</span></p>
+        <button id="button-start">Start</button>
+        <button id="button-stop">Stop</button>
+        <button id="button-reset">Reset</button>
+    </div>
+
+    <script>
+        window.onload = function (){
+            var seconds = 00;
+            var tens = 00;
+            var appendTens = document.getElementById("tens");
+            var appendSeconds = document.getElementById("seconds");
+            var buttonStart = document.getElementById("button-start");
+            var buttonStop = document.getElementById("button-stop");
+            var buttonReset = document.getElementById("button-reset");
+            var interval;
+        }
+
+        buttonStart.onclick = function() {
+            clearInterval(interval);
+            interval = setInterval(startTimer, 10);
+        }
+
+        buttonStop.onclick = function() {
+            clearInterval(interval);
+        }
+
+        buttonReset.onclick = function() {
+            clearInterval(interval);
+            tens = "00";
+            seconds = "00";
+            appendTens.innerHTML = tens;
+            appendSeconds.innerHTML = seconds;
+
+            function startTime () {
+                
+            }
+        }
+    </script>
+</body>
+</html> 
